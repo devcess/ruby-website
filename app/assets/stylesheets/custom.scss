@@ -4,14 +4,41 @@
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
+$shadow: 0 5px 5px rgba(0,0,0,.25);
 
 /* universal */
 .jumbotron{
-    background: url("pagebanner.jpg") no-repeat center center; 
+    background: url("banner-03-01-01.png") no-repeat center center; 
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    box-shadow: $shadow;
+    -webkit-box-shadow: $shadow;
+}
 
+.btn{
+  background: $gray-darker;
+  white-space: normal !important;
+  word-wrap: normal;
+  margin: 20px;
+  margin-left: 60px;
+}
+
+.list-group{
+  text-align: center;
+}
+.push-spaces{
+  height: 300px;
+}
+
+.gap-right{
+  margin-right: 50px;
+  margin-left:  20px;
 }
 body {
   padding-top: 60px;
+  background-color: $gray-darker;
 }
 
 section {
@@ -36,24 +63,28 @@ h1, h2, h3, h4, h5, h6{
 }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  text-align: center; 
 }
 
 h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
+  margin-bottom: 10px;
+  margin-left: 20px;
   font-weight: normal;
+  text-align: center; 
   color: $gray-light;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+  margin-left: 20px;
+  text-align: center; 
 }  
 
 /* header */
