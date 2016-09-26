@@ -1,3 +1,9 @@
+<!-- change: app/control/charge_controller.rb
+             config/initializers/stripe.rb
+             app/views/layouts/charges.html.erb
+             app/views/charges/new.html.erb
+             app/views/charges/create.html.erb -->
+
 <!-- START HEAD OF PAGE -->
 <div class="center jumbotron">
   <div class="container push-spaces">
@@ -12,6 +18,25 @@
       <div class="col-md-3">
         <%= image_tag("product.jpg", :alt => "rss feed", :class => "img-responsive img-circle center-block", :width => "200") %>
         <%= link_to "BUY NOW" , '#', class: "btn btn-lg btn-primary center" %>
+        <!-- https://stripe.com/docs/orders -->
+        <%= form_tag charges_path do %>
+        <article>
+          <% if flash[:error].present? %>
+          <div id="error_explanation">
+          <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+          <label class="amount">
+            <span>Amount: $5.00</span>
+          </label>
+        </article>
+
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+          data-description="A month's subscription"
+          data-amount="500"
+          data-locale="auto"></script>
+        <% end %>
       </div>
       <div class="col-md-6">
         <h1>Product</h1>
@@ -24,9 +49,8 @@
         <hr>
       </div>
         <div class="col-md-3">
-          
         </div>
-      </div>
+    </div>
       <div class="row"> 
         <div class="col-md-3"></div>
         <div class="col-md-3">
@@ -52,17 +76,15 @@
       <hr>
       <div class="row">  
         <div class="col-md-4">
-        <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
+          <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
         </div>
         <div class="col-md-4">
-        <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
+          <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
         </div>
         <div class="col-md-4">
-        <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
+          <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
         </div>
       </div>
-
-
   </div>
 </div>
 <!-- END PRODUCT -->
@@ -71,67 +93,57 @@
 <div class="panel panel-default">
   <div class="panel-body" id="about">
     <div class="row">
-    <div class="col-md-9">
-      <h1>About Us</h1>
-      <h2>Get Twisted</h2>
-      <hr>
-      <p>Twisted Alpine Products started out with 3 guys and a vision. Improve the faulty weak oem brake reservoir on the current skidoo snowmobiles!</p>
-    </div>
+      <div class="col-md-9">
+        <h1>Want to know more?</h1>
+        <h2>Get Twisted</h2>
+        <p>Twisted Alpine Products started out with 3 guys and a vision. Improve the faulty weak oem brake reservoir on the current skidoo snowmobiles!
+            Find us on Facebook, Instagram or send us an email. Don't let yourself miss any sledding time due to a busted break reservoir!</p>
+      </div>
     <div class="col-md-3">
-      <%= image_tag("sled.jpg", :alt => "rss feed", :class => "img-responsive img-rounded center-block", :width => "200") %>
+      <%= image_tag("sled.jpg", :alt => "rss feed", :class => "img-responsive img-rounded center-block", :width => "225") %>
     </div>
 
-  </div>
-      <div class="row">
-    <div class="col-md-12">
-    <hr>
-      <h1>Contact</h1>
-      <h2>Get Twisted</h2>
-      <hr>
     </div>
-          <div class="row">
-    <div class="col-md-6">
-      <h2>Social Media</h2>
-      <hr>
-      <p>ddddffdsfd</p>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-2">
+        <i class="fa fa-instagram fa-5x" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-facebook-square fa-5x" aria-hidden="true"></i>
+      </div>
+      <div class="col-md-2">
+        <i class="fa fa-envelope fa-5x" aria-hidden="true"></i>
+      </div>
     </div>
-    <div class="col-md-6">
-          <h2>Email</h2>
-      <hr>
-      <%= link_to "Email" , '#', class: "btn btn-lg btn-primary center-block" %>
-    </div>
-
-
   </div>
-  </div>
-</div>
 </div>
 
 <div class="panel panel-default">
   <div class="panel-body">
     <div class="row">
-        <div class="col-md-4">
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-  </div>
+      </div>
+    </div>
   <hr>
-      <div class="row">
-        <div class="col-md-4">
+    <div class="row">
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
         <%= image_tag("span-11-rows-15.gif", :alt => "rss feed", :class => "img-responsive img-rounded center-block") %>
-        </div>
-  </div>
+      </div>
+    </div>
   </div>
 </div>
 <!-- END ABOUT CONTACT -->
