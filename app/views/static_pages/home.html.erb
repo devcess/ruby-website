@@ -5,10 +5,12 @@
              app/views/charges/create.html.erb -->
 
 <!-- START HEAD OF PAGE -->
-<div class="card-panel" id="header">
+<header id="necklace_header" class="img-responsive">
+    <%= image_tag("banner-logo-01.png", :class => "responsive-img") %>
   
-    <%= image_tag("twisted.png", :class => "responsive-img left-align", :width => "500") %>
-</div>
+    
+    
+</header>
 <!-- END HEAD OF PAGE -->
 
 <!-- START PRODUCT -->
@@ -35,56 +37,55 @@
   </div>
   <hr>
   <div class="row">
+    
     <div class="col s12 m4">
-
-      <div class="card horizontal">
+      <div class="card">
         <div class="card-image">
-          <img src="http://lorempixel.com/100/190/nature/6">
+          <%= image_tag("res-01.png", :alt => "rss feed", :class => "responsive-img", :width => "100") %>
         </div>
-        <div class="card-stacked">
+        
           <div class="card-content">
-            <p>reservoir</p>
+            <p>Reservoir</p>
+            <p>$120.00</p>
+            <center><%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %></center>
           </div>
-          <div class="card-action">
-            <%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %>
-          </div>
-        </div>
+          
+            
+       
+       
       </div>
     </div>
     <div class="col s12 m4">
-
-      <div class="card horizontal">
+      <div class="card">
         <div class="card-image">
-          <img src="http://lorempixel.com/100/190/nature/6">
+          <%= image_tag("top-01.png", :alt => "rss feed", :class => "responsive-img") %>
         </div>
-        <div class="card-stacked">
           <div class="card-content">
             <p>Lid</p>
+            <p>$30.00</p>
+            <center><%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %></center>
           </div>
-          <div class="card-action">
-            <%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %>
-          </div>
-        </div>
       </div>
     </div>
     <div class="col s12 m4">
 
-      <div class="card horizontal">
+      <div class="card">
         <div class="card-image">
-          <img src="http://lorempixel.com/100/190/nature/6">
+          <%= image_tag("full-01-01.png", :alt => "rss feed", :class => "responsive-img") %>
         </div>
-        <div class="card-stacked">
+   
           <div class="card-content">
             <p>Full kit option</p>
+            <p>$150.00</p>
+            <center><%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %></center>
           </div>
-          <div class="card-action">
-            <%= link_to "BUY NOW" , '#', class: "waves-effect waves-light btn" %>
-          </div>
-        </div>
+     
       </div>
-    </div>
+   
+      </div>
   </div>
 </div>
+
 
 <!-- END PRODUCT -->
 
@@ -98,13 +99,13 @@
         break reservoir!</p>
         <div class="row">
     <div class="col s12 m4">
-      <p><i class="fa fa-instagram fa-3x" aria-hidden="true"></i>   @twisted.alpine.products</p>
+      <a href="https://www.instagram.com/twisted.alpine.products/"><p><i class="fa fa-instagram fa-3x" aria-hidden="true"></i>   @twisted.alpine.products</p></a>
     </div>
     <div class="col s12 m4">
-      <p><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>   @twisted.alpine.products</p>
+      <a href="https://www.facebook.com/Twisted.alpine.products/"><p><i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i>   @twisted.alpine.products</p></a>
     </div>
     <div class="col s12 m4">
-      <p><i class="fa fa-envelope fa-3x" aria-hidden="true"></i>  @twisted.alpine.products</p>
+      <a href="mailto:twisted.alpine.products@gmail.com"><p><i class="fa fa-envelope fa-3x" aria-hidden="true"></i>  Email Us</p></a>
     </div>
   </div>
     </div>

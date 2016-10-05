@@ -13,9 +13,7 @@ $shadow-nav: 0px 8px 8px rgba(0,0,0,.25);
   @extend .grey, .darken-2;
 }
 
-.push-spaces{
-  height: 300px;
-}
+
 
 .card-panel {
   background-color: #212121;
@@ -38,22 +36,16 @@ body {
   background-color: #303030;
 }
 
-#header{
-    margin-top: 20px;
-    background: url("banner.jpg"); 
-    background-position: 25% 60%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 300px;
+#necklace_header {
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position: top center;
 
-}
+    background-size: cover;  
 
-#heading{
-  
-  text-align: center;
-  padding-bottom: 60px;
-  padding-top: 10px;
-  background-color: #303030;
+    
+    margin-bottom: 20px; 
+
 }
 
 p {
