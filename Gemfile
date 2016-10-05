@@ -13,6 +13,7 @@ gem 'jbuilder',     '2.4.1'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 4.6.2'
 gem 'stripe'
+gem 'materialize-sass'
 
 group :development, :test do
   gem 'sqlite3', '1.3.11'

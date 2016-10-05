@@ -1,13 +1,14 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <div class="container-fluid">
-    <%= link_to "Twisted Alpine", root_path, id: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-static-top">
-        <li><%= link_to "Home",   root_path %></li>
+<div class="navbar-fixed z-depth-3">
+<nav>
+  <div class="nav-wrapper">
+    <%= link_to "Twisted Alpine", root_path, class: "brand-logo center" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li>
+          <%= link_to "Home",   root_path %>
+        </li>
         <li><a href="#product">Product</a></li>
         <li><a href="#about">About</a></li>
       </ul>
-    </nav>
   </div>
-</header>
+</nav>
+</div>

@@ -1,135 +1,69 @@
 @import "bootstrap-sprockets";
-@import "bootstrap";
+@import "bootstrap"; 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "materialize/components/color";
+$primary-color: color("grey", "darken-4") !default;
+@import "materialize";
 
-/* mixins, variables, etc. */
-
-$gray-medium-light: #eaeaea;
-$shadow: 0 5px 5px rgba(0,0,0,.25);
-
-/* universal */
-.jumbotron{
-    background: url("Untitled-05-01.png") no-repeat center center; 
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-    box-shadow: $shadow;
-    -webkit-box-shadow: $shadow;
-}
+$shadow: 2px 6px 4px rgba(0,0,0,.15);
+$shadow-nav: 0px 8px 8px rgba(0,0,0,.25);
 
 .btn{
-  background: $gray-darker;
-  white-space: normal !important;
-  word-wrap: normal;
-  margin: 20px;
-  margin-left: 60px;
+  @extend .grey, .darken-2;
 }
 
-.list-group{
-  text-align: center;
-}
 .push-spaces{
   height: 300px;
 }
 
-.gap-right{
-  margin-right: 50px;
-  margin-left:  20px;
+.card-panel {
+  background-color: #212121;
 }
+
+.nav-wrapper {
+  background-color: #000000;
+}
+.card-content {
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.card-stacked {
+  background-color: #424242;
+}
+
 
 body {
-  padding-top: 60px;
-  background-color: $gray-darker;
+  background-color: #303030;
 }
 
-section {
-  overflow: auto;
+#header{
+    margin-top: 20px;
+    background: url("banner.jpg"); 
+    background-position: 25% 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+
 }
 
-textarea {
-  resize: vertical;
-}
-
-.center {
+#heading{
+  
   text-align: center;
-  h1{
-    margin-bottom: 10px;
-  }
-} 
-
-/* typography */
-
-h1, h2, h3, h4, h5, h6{
-  line-height: 1;
-}
-
-h1 {
-  font-size: 2em;
-  letter-spacing: -2px;
-  margin-bottom: 15px;
-  margin-left: 10px;
-  text-align: center; 
-}
-
-h2 {
-  font-size: 1.2em;
-  letter-spacing: -1px;
-  margin-bottom: 10px;
-  margin-left: 20px;
-  font-weight: normal;
-  text-align: center; 
-  color: $gray-light;
+  padding-bottom: 60px;
+  padding-top: 10px;
+  background-color: #303030;
 }
 
 p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-  margin-left: 20px;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+}
+
+h3 {
+  color: #ffffff;
   text-align: center; 
-}  
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size:1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
 }
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-  color: $gray;
-  &:hover {
-   color: $gray-darker;
-  }  
- }
-  small {
-  float: left;
-  }
-
-  ul {
-   float: right;
-   list-style: none;
-  li {
-   float: left;
-   margin-left: 15px;
-  }
- }
-}
+ 
