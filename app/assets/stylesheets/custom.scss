@@ -1,5 +1,4 @@
-@import "bootstrap-sprockets";
-@import "bootstrap"; 
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "materialize/components/color";
@@ -9,11 +8,16 @@ $primary-color: color("grey", "darken-4") !default;
 $shadow: 2px 6px 4px rgba(0,0,0,.15);
 $shadow-nav: 0px 8px 8px rgba(0,0,0,.25);
 
+.fa{
+  color: #ffffff;
+}
+
+
 .btn{
   @extend .grey, .darken-2;
 }
 
-
+.anchor { padding-top: 70px; } 
 
 .card-panel {
   background-color: #212121;
@@ -31,12 +35,17 @@ $shadow-nav: 0px 8px 8px rgba(0,0,0,.25);
   background-color: #424242;
 }
 
+.page-footer {
+  background-image: url(footer.png);
+  background-size: center;
+  min-height: 200px;
+}
 
 body {
   background: url(background-2-01.png) bottom right no-repeat;
   background-attachment: fixed;
   background-color: #303030;
-  background-size: 350px, 0px;
+  background-size: 315px, 0px;
 }
 
 
