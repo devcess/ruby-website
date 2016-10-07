@@ -10,9 +10,18 @@
     </label>
   </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-amount="500"
-          data-locale="auto"></script>
+<script src="https://checkout.stripe.com/checkout.js"></script>
+    
+<form action="/charge" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_M8fZCal72Grf4WJF3i3iVp6Q"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-name="Matt's Widgets and Gizmos"
+    data-description="2 widgets ($20.00)"
+    data-amount="2000"
+    data-billingAddress="true"
+    data-shippingAddress="true">
+  </script>
+</form>  data-locale="auto"></script>
 <% end %>

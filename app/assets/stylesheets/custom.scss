@@ -33,7 +33,10 @@ $shadow-nav: 0px 8px 8px rgba(0,0,0,.25);
 
 
 body {
-  background: #303030;
+  background: url(background-2-01.png) bottom right no-repeat;
+  background-attachment: fixed;
+  background-color: #303030;
+  background-size: 350px, 0px;
 }
 
 

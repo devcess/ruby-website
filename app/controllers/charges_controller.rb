@@ -17,6 +17,7 @@ def create
     :amount      => @amount,
     :description => 'Rails Stripe customer',
     :currency    => 'usd',
+    :is_quantity         =>  '1'
   )
 
 rescue Stripe::CardError => e
